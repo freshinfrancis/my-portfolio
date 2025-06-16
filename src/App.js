@@ -8,7 +8,7 @@ const App = () => {
     <div>
       <nav className="navbar">
         <div className="navbar-container">
-          <div className="logo">Freshin</div>
+          <div className="logo"></div>
           <button
             className="hamburger"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
