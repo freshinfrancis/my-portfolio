@@ -1,16 +1,27 @@
-import React from "react";
+import React, { useState } from "react";
 import "./styles.css";
 
 const App = () => {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
   return (
     <div>
       <nav className="navbar">
-        <ul>
-          <li><a href="#about">About</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#gallery">Gallery</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
+        <div className="navbar-container">
+          <div className="logo">Freshin</div>
+          <button
+            className="hamburger"
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          >
+            ☰
+          </button>
+          <ul className={`nav-links ${mobileMenuOpen ? "active" : ""}`}>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
       </nav>
 
       <header className="hero">
